@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="wheelViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="itemNumber">3</item>
+        <item name="lineColor">#ff6600</item>
+        <item name="bottomLineColor">#ffdadada</item>
+        <item name="lineHeight">3dp</item>
+        <item name="firstLineAndSecondLineSpace">10dp</item>
+        <item name="maskHight">32dp</item>
+        <item name="noEmpty">true</item>
+        <item name="normalTextColor">#ababab</item>
+        <item name="normalTextSize">14sp</item>
+        <item name="selectedTextColor">#343434</item>
+        <item name="selectedTextSize">18sp</item>
+        <item name="unitHight">50dp</item>
+    </style>
+
+</resources>

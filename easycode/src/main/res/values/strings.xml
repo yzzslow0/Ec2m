@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EasyCode</string>
+    <string name="picker_title">%1$s日%2$s时%3$s分</string>
+</resources>

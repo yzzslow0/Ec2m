@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="runtime-0.8.5">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/ec/build/intermediates/exploded-aar/com.antfortune.freeline/runtime/0.8.5/res" />
+      <root url="jar://$PROJECT_DIR$/ec/build/intermediates/exploded-aar/com.antfortune.freeline/runtime/0.8.5/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
