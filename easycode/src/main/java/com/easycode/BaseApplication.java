@@ -19,18 +19,13 @@ public class BaseApplication extends Application {
 //        MultiDex.install(newBase);
 //        super.attachBaseContext(newBase);
 //    }
-
-
     @Override
     public void onCreate() {
         super.onCreate();
+
         ContextHolder.initial(this);
-        init();
     }
 
-    private void init() {
-//        GreenDaoManager
-    }
 
 
 }

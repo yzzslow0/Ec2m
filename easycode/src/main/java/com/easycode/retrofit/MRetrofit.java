@@ -38,8 +38,8 @@ import rx.schedulers.Schedulers;
  */
 public class MRetrofit {
 
-    public static final String IP = "http://172.16.0.200";
-//    public static final String IP = "http://172.16.0.167";
+//    public static final String IP = "http://172.16.0.200";
+    public static final String IP = "http://172.16.0.167";
     private static final int DEFAULT_TIMEOUT = 20;
     private static MRetrofit mInstance;
     private static Map<String,String> headers;

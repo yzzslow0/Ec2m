@@ -19,6 +19,8 @@ import com.easycode.event.UpdataEvent;
 import com.easycode.util.PreferencesUtils;
 import com.example.ec.activity.CustomScanActivity;
 import com.example.ec.activity.HttpTestActivity;
+import com.example.ec.activity.NewMenuActivity;
+import com.example.ec.greendao.GreenDAOActivity;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -77,8 +79,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, HttpTestActivity.class));
                 break;
             case R.id.btn_newapi:
+                startActivity(new Intent(this, NewMenuActivity.class));
                 break;
             case R.id.btn_greendao:
+                startActivity(new Intent(this, GreenDAOActivity.class));
                 break;
             case R.id.btn_update_app:
                 update();

@@ -20,7 +20,23 @@ android {
     productFlavors {
     }
 }
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
+    }
+}
+apply plugin: 'org.greenrobot.greendao'
 
+greendao {
+    schemaVersion 1//数据库版本号
+    daoPackage 'com.example.ec.green'//设置DaoMaster、DaoSession、Dao包名
+    targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    //targetGenDirTest：设置生成单元测试目录
+    //generateTests：设置自动生成单元测试用例
+}
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -30,5 +46,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.1'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.1'
 }
