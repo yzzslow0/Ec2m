@@ -1,20 +1,11 @@
 package com.example.ec.adapter;
 
-import android.text.TextPaint;
-import android.text.style.ClickableSpan;
-import android.view.View;
-
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.easycode.util.ContextHolder;
-import com.easycode.util.ToastUtil;
 import com.easycode.util.UiSizeUtil;
 import com.example.ec.DataServer;
 import com.example.ec.R;
 import com.example.ec.StateHEHE;
-import com.example.ec.model.GreenTest;
-
-import java.util.List;
 
 
 /**
