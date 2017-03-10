@@ -43,7 +43,7 @@ public class GreenTestDao extends AbstractDao<GreenTest, Long> {
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"GREEN_TEST\" (" + //
-                "\"_id\" INTEGER PRIMARY KEY ," + // 0: id
+                "\"_id\" INTEGER PRIMARY KEY AUTOINCREMENT ," + // 0: id
                 "\"NAME\" TEXT," + // 1: name
                 "\"PASSWORD\" TEXT," + // 2: password
                 "\"COMMENT\" TEXT);"); // 3: comment

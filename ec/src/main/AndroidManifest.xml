@@ -34,7 +34,10 @@
             android:name="com.easycode.service.UpdateService"
             android:enabled="true" />
 
-        <activity android:name=".activity.NewMenuActivity"></activity>
+        <activity android:name=".activity.NewMenuActivity" />
+        <activity android:name=".activity.XmlActivity" />
+        <activity android:name=".activity.TabActivity" />
+        <activity android:name=".activity.DialogActivity"></activity>
     </application>
 
 </manifest>

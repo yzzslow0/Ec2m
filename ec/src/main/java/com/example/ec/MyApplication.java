@@ -3,6 +3,7 @@ package com.example.ec;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.easycode.BaseApplication;
+import com.easycode.util.ContextHolder;
 import com.example.ec.green.DaoMaster;
 import com.example.ec.green.DaoSession;
 import com.example.ec.util.GreenDaoManager;
@@ -19,6 +20,7 @@ public class MyApplication extends BaseApplication {
         super.onCreate();
 
         instances = this;
+        ContextHolder.initial(this);
         GreenDaoManager.getInstance();
     }
 

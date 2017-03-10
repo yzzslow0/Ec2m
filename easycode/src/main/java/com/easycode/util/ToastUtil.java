@@ -19,32 +19,24 @@ public class ToastUtil {
 
 
     private static void Show(String content, int Short, int Show) {
-        if (isDebug || Show == SHOW) {
+//        if (isDebug ) {
             if (Short == SHORT) {
                 toast = Toast.makeText(ContextHolder.getContext(), content + "", Toast.LENGTH_SHORT);
             } else {
                 toast = Toast.makeText(ContextHolder.getContext(), content + "", Toast.LENGTH_LONG);
             }
             toast.show();
-        }
+//        }
     }
+
+
 
 
     public static void showLong(String content) {
         if (toast != null)
             toast.cancel();
-        toast.cancel();
 
-        Show(content, LONG, NOTSHOW);
-
-    }
-
-    public static void showLong(String content, int show) {
-        if (toast != null)
-            toast.cancel();
-        toast.cancel();
-
-        Show(content, LONG, show);
+        Show(content, LONG, SHOW);
 
     }
 
@@ -54,11 +46,6 @@ public class ToastUtil {
         Show(content, SHORT, NOTSHOW);
     }
 
-    public static void showShort(String content, int show) {
-        if (toast != null)
-            toast.cancel();
-        Show(content, SHORT, show);
-    }
 
     public static void DebugShow(String content) {
         if (toast != null)
@@ -66,11 +53,7 @@ public class ToastUtil {
         Show(content, SHORT, NOTSHOW);
     }
 
-    public static void DebugShow(String content, int show) {
-        if (toast != null)
-            toast.cancel();
-        Show(content, SHORT, show);
-    }
+
 
 
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="2dp"/>
+    <solid
+        android:color="@color/colorPrimary"/>
+    //蓝色
+    <stroke
+        android:width="1dp"
+        android:color="@color/colorAccent"/>
+    //红色
+    <padding
+        android:bottom="3dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="3dp"/>
+
+</shape>

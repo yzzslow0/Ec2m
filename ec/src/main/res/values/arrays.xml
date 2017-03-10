@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages">
+        <item>c语言</item>
+        <item>java </item>
+        <item>php</item>
+        <item>xml</item>
+        <item>html</item>
+    </string-array>
+
+    <integer-array name="reminder_methods_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </integer-array>
+
+</resources>

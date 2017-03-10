@@ -9,7 +9,7 @@ import org.greenrobot.greendao.annotation.Generated;
  */
 @Entity
 public class GreenTest {
-    @Id
+    @Id(autoincrement = true)
     private Long id;
     private String name;
     private String password;
@@ -48,5 +48,6 @@ public class GreenTest {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
 
 }

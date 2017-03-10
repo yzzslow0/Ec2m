@@ -15,11 +15,14 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.easycode.event.UpdataEvent;
-
 import com.easycode.util.PreferencesUtils;
 import com.example.ec.activity.CustomScanActivity;
+import com.example.ec.activity.DialogActivity;
 import com.example.ec.activity.HttpTestActivity;
 import com.example.ec.activity.NewMenuActivity;
+import com.example.ec.activity.TabActivity;
+import com.example.ec.activity.XmlActivity;
+import com.example.ec.anim.AnimActivity;
 import com.example.ec.greendao.GreenDAOActivity;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -46,6 +49,16 @@ public class MainActivity extends AppCompatActivity {
     Button btnGreendao;
     @BindView(R.id.btn_update_app)
     Button btnUpdateApp;
+    @BindView(R.id.btn_scan)
+    Button btnScan;
+    @BindView(R.id.btn_xml)
+    Button btnXml;
+    @BindView(R.id.btn_tab)
+    Button btnTab;
+    @BindView(R.id.btn_dialog)
+    Button btnDialog;
+    @BindView(R.id.btn_lottie)
+    Button btnLottie;
 
     private Map<String, String> params = new HashMap<>();
     public static final String DOWNLOAD_ID = "download_id";
@@ -72,7 +85,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.button, R.id.btn_newapi, R.id.btn_greendao, R.id.btn_update_app,R.id.btn_scan})
+    @OnClick({R.id.button, R.id.btn_newapi, R.id.btn_greendao,
+            R.id.btn_update_app, R.id.btn_scan,R.id.btn_xml,
+            R.id.btn_tab,R.id.btn_dialog,R.id.btn_lottie})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
@@ -90,6 +105,18 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_scan:
                 scan();
                 break;
+            case R.id.btn_xml:
+                startActivity(new Intent(this, XmlActivity.class));
+                break;
+            case R.id.btn_tab:
+                startActivity(new Intent(this, TabActivity.class));
+                break;
+            case R.id.btn_dialog:
+                startActivity(new Intent(this, DialogActivity.class));
+                break;
+            case R.id.btn_lottie:
+                startActivity(new Intent(this, AnimActivity.class));
+                break;
         }
     }
 
@@ -106,12 +133,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
 // 通过 onActivityResult的方法获取 扫描回来的 值
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
-        if(intentResult != null) {
-            if(intentResult.getContents() == null) {
-                Toast.makeText(this,"内容为空",Toast.LENGTH_LONG).show();
+        IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (intentResult != null) {
+            if (intentResult.getContents() == null) {
+                Toast.makeText(this, "内容为空", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this,"扫描成功:"+intentResult.getContents(),Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "扫描成功:" + intentResult.getContents(), Toast.LENGTH_LONG).show();
                 // ScanResult 为 获取到的字符串
 //                String ScanResult = intentResult.getContents();
 //
@@ -137,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
 //                        });
             }
         } else {
-            super.onActivityResult(requestCode,resultCode,data);
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
 
@@ -171,11 +198,12 @@ public class MainActivity extends AppCompatActivity {
 
         lastDownloadId = dowanloadmanager.enqueue(request);
         //9.保存id到缓存
-        PreferencesUtils.putLong(this,DOWNLOAD_ID, lastDownloadId);
+        PreferencesUtils.putLong(this, DOWNLOAD_ID, lastDownloadId);
         //10.采用内容观察者模式实现进度
         downloadObserver = new DownloadChangeObserver(null);
         getContentResolver().registerContentObserver(CONTENT_URI, true, downloadObserver);
     }
+
 
     //用于显示下载进度
     class DownloadChangeObserver extends ContentObserver {
@@ -210,7 +238,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Subscribe
     public void onCloseUpdateDialog(UpdataEvent event) {
-        if(materialDialog!=null)
+        if (materialDialog != null)
             materialDialog.dismiss();
 
 
@@ -219,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (downloadObserver!=null)
+        if (downloadObserver != null)
             getContentResolver().unregisterContentObserver(downloadObserver);
         EventBus.getDefault().unregister(this);
     }
