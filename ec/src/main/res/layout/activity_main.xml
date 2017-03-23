@@ -89,5 +89,14 @@
         android:id="@+id/btn_lottie"
         android:layout_alignParentRight="true" />
 
+    <Button
+        android:id="@+id/btn_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_lottie"
+        android:text="tools" />
+
 
 </RelativeLayout>

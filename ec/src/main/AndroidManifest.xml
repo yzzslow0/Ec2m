@@ -37,7 +37,8 @@
         <activity android:name=".activity.NewMenuActivity" />
         <activity android:name=".activity.XmlActivity" />
         <activity android:name=".activity.TabActivity" />
-        <activity android:name=".activity.DialogActivity"></activity>
+        <activity android:name=".activity.DialogActivity" />
+        <activity android:name=".newapi.DataBindActivity"></activity>
     </application>
 
 </manifest>

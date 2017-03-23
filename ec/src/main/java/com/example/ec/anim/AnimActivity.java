@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatSeekBar;
-import android.widget.ProgressBar;
+import android.widget.Button;
 import android.widget.SeekBar;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -14,6 +14,7 @@ import com.example.ec.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class AnimActivity extends AppCompatActivity {
 
@@ -22,6 +23,8 @@ public class AnimActivity extends AppCompatActivity {
     LottieDrawable drawable;
     @BindView(R.id.progressBar)
     AppCompatSeekBar progressBar;
+    @BindView(R.id.button12)
+    Button button12;
     private boolean isplay = false;
     private CountDownTimer timer;
 
@@ -35,7 +38,7 @@ public class AnimActivity extends AppCompatActivity {
     }
 
     private void lottieTest() {
-        animationView.setAnimation("data.json");
+        animationView.setAnimation("fourball.json");
         animationView.addAnimatorUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
@@ -44,16 +47,20 @@ public class AnimActivity extends AppCompatActivity {
         });
 
         progressBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (!animationView.isAnimating()) {
                     animationView.setProgress(progress / 100f);
                 }
             }
 
-            @Override public void onStartTrackingTouch(SeekBar seekBar) {
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                animationView.pauseAnimation();
             }
 
-            @Override public void onStopTrackingTouch(SeekBar seekBar) {
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
 //        animationView.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +82,15 @@ public class AnimActivity extends AppCompatActivity {
 //
 //            }
 //        });
+
+    }
+
+    @OnClick(R.id.button12)
+    public void onClick() {
+        if (!animationView.isAnimating()){
+            animationView.loop(true);
+            animationView.playAnimation();
+        }
 
     }
 }

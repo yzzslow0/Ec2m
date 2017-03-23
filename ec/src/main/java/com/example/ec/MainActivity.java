@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
     Button btnDialog;
     @BindView(R.id.btn_lottie)
     Button btnLottie;
+    @BindView(R.id.btn_tools)
+    Button btnTools;
+
 
     private Map<String, String> params = new HashMap<>();
     public static final String DOWNLOAD_ID = "download_id";
@@ -86,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     @OnClick({R.id.button, R.id.btn_newapi, R.id.btn_greendao,
-            R.id.btn_update_app, R.id.btn_scan,R.id.btn_xml,
-            R.id.btn_tab,R.id.btn_dialog,R.id.btn_lottie})
+            R.id.btn_update_app, R.id.btn_scan, R.id.btn_xml,
+            R.id.btn_tab, R.id.btn_dialog, R.id.btn_lottie,R.id.btn_tools})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
@@ -116,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_lottie:
                 startActivity(new Intent(this, AnimActivity.class));
+                break;
+            case R.id.btn_tools:
+                startActivity(new Intent(this,AnimActivity.class));
                 break;
         }
     }
@@ -203,6 +209,8 @@ public class MainActivity extends AppCompatActivity {
         downloadObserver = new DownloadChangeObserver(null);
         getContentResolver().registerContentObserver(CONTENT_URI, true, downloadObserver);
     }
+
+
 
 
     //用于显示下载进度

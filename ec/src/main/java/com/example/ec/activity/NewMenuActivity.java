@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.easycode.event.HttpEvent;
 import com.easycode.util.L;
 import com.example.ec.R;
+import com.example.ec.newapi.DataBindActivity;
 import com.example.ec.newapi.RecyclerViewActivity;
 import com.example.ec.newapi.ToolBarActivity;
 
@@ -48,6 +49,7 @@ public class NewMenuActivity extends AppCompatActivity {
                 startActivity(new Intent(this, RecyclerViewActivity.class));
                 break;
             case R.id.button10:
+                startActivity(new Intent(this, DataBindActivity.class));
                 break;
         }
     }

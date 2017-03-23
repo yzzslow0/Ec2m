@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <variable name="test" type="com.example.ec.model.DataBindTest"/>
+        <variable
+            name="dianiji" type="com.example.ec.newapi.handlers.EventHandler"/>
+
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@{test.test1}"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/textView4" />
+
+        <!-- 布局文件中的表达式使用 “@{}” 的语法 -->
+        <TextView android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@{test.test2}"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView6" />
+
+        <TextView android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@{test.test3}"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/textView5" />
+        <TextView android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@{test.test4}"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentLeft="true" />
+        <TextView android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@{test.test5}"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentRight="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_centerHorizontal="true"
+            android:onClick="@{dianiji::onClickChange}"
+            android:text="Button" />
+
+    </RelativeLayout>
+</layout>
