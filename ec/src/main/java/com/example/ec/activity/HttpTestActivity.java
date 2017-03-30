@@ -9,7 +9,7 @@ import android.widget.Button;
 import com.easycode.event.HttpEvent;
 import com.easycode.retrofit.MRetrofit;
 import com.easycode.retrofit.TransformUtils;
-import com.easycode.retrofit.callback.BaseSubscriber;
+import com.easycode.retrofit.callback.BaseObserver;
 import com.easycode.retrofit.model.BaseCallModel;
 import com.easycode.util.JsonUtil;
 import com.easycode.util.L;
@@ -31,6 +31,8 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
@@ -74,8 +76,10 @@ public class HttpTestActivity extends AppCompatActivity {
             case R.id.Rx_test:
 
                 MRetrofit.getInstance().getRetrofitService().executePost("Retrofit2_222",params)
-                        .compose(TransformUtils.<BaseCallModel>defaultSchedulers())
-                        .subscribe(new BaseSubscriber<BaseCallModel>() {
+                        .compose(TransformUtils.<BaseCallModel>all_io())
+//                        .subscribeOn(Schedulers.newThread())
+//                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(new BaseObserver<BaseCallModel>() {
                             @Override
                             public void onFailed(String message) {
                                 L.d(message + "");
@@ -90,6 +94,15 @@ public class HttpTestActivity extends AppCompatActivity {
                                     L.d(t.get(i).getAge() + "");
                                 }
                             }
+//                            @Override
+//                            public void onFailed(String message) {
+//
+//                            }
+//
+//                            @Override
+//                            protected void onSuccess(String response) {
+//
+//                            }
                         });
 
                 break;

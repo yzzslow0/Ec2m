@@ -38,7 +38,9 @@
         <activity android:name=".activity.XmlActivity" />
         <activity android:name=".activity.TabActivity" />
         <activity android:name=".activity.DialogActivity" />
-        <activity android:name=".newapi.DataBindActivity"></activity>
+        <activity android:name=".newapi.DataBindActivity" />
+        <activity android:name=".activity.RxJavaActivity" />
+        <activity android:name=".activity.XmlJxActivity"></activity>
     </application>
 
 </manifest>

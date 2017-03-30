@@ -24,14 +24,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+//import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import rx.Observable;
-import rx.Subscriber;
-import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
+
 
 /**
  * Created by yzz on 2016/8/31.
@@ -60,7 +56,7 @@ public class MRetrofit {
 
     private MRetrofit(Context context,Map<String, String> headers) {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
-        httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
@@ -70,6 +66,7 @@ public class MRetrofit {
                 .addInterceptor(new SaveCookiesInterceptor(context))
                 .addInterceptor(httpLoggingInterceptor)
                 .addNetworkInterceptor(new CaheInterceptor())
+
                 .cache(new Cache(new File(ContextHolder.getContext().getCacheDir(),"mReCache"),1024*1024*10))
                 .build();
 
@@ -77,7 +74,7 @@ public class MRetrofit {
                 .client(okHttpClient)
                 .baseUrl(IP)
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())//1.X为RxJavaCallAdapterFactory
                 .build();
 
         retrofitService = retrofit.create(RetrofitService.class);

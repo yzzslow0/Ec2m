@@ -20,6 +20,7 @@ import com.example.ec.activity.CustomScanActivity;
 import com.example.ec.activity.DialogActivity;
 import com.example.ec.activity.HttpTestActivity;
 import com.example.ec.activity.NewMenuActivity;
+import com.example.ec.activity.RxJavaActivity;
 import com.example.ec.activity.TabActivity;
 import com.example.ec.activity.XmlActivity;
 import com.example.ec.anim.AnimActivity;
@@ -59,8 +60,10 @@ public class MainActivity extends AppCompatActivity {
     Button btnDialog;
     @BindView(R.id.btn_lottie)
     Button btnLottie;
-    @BindView(R.id.btn_tools)
-    Button btnTools;
+    @BindView(R.id.btn_rxjava)
+    Button btnRxJava;
+    @BindView(R.id.btn_xmljx)
+    Button btnXmljx;
 
 
     private Map<String, String> params = new HashMap<>();
@@ -90,7 +93,8 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.button, R.id.btn_newapi, R.id.btn_greendao,
             R.id.btn_update_app, R.id.btn_scan, R.id.btn_xml,
-            R.id.btn_tab, R.id.btn_dialog, R.id.btn_lottie,R.id.btn_tools})
+            R.id.btn_tab, R.id.btn_dialog, R.id.btn_lottie, R.id.btn_rxjava,
+            R.id.btn_xmljx})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
@@ -120,8 +124,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_lottie:
                 startActivity(new Intent(this, AnimActivity.class));
                 break;
-            case R.id.btn_tools:
-                startActivity(new Intent(this,AnimActivity.class));
+            case R.id.btn_rxjava:
+                startActivity(new Intent(this, RxJavaActivity.class));
+                break;
+            case R.id.btn_xmljx:
+//                startActivity(new Intent(this,XmlJxActivity.class));
                 break;
         }
     }
@@ -209,8 +216,6 @@ public class MainActivity extends AppCompatActivity {
         downloadObserver = new DownloadChangeObserver(null);
         getContentResolver().registerContentObserver(CONTENT_URI, true, downloadObserver);
     }
-
-
 
 
     //用于显示下载进度

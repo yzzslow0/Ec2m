@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<regions token="1">
+	<province name="直辖市" display="false" match="zhixiashi">
+	    <city code="010" capital="true" match="beijing">北京</city>
+		<city code="021" match="shanghai">上海</city>
+		<city code="022" match="tianjin">天津</city>
+		<city code="023" match="chongqing">重庆</city>
+	</province>
+	<province name="特别行政区" display="false" match="tebiexingzhengqu">
+		<city code="1852" capital="true" match="hong kong">香港</city>
+		<city code="1852" match="macau">澳门</city>
+	</province>
+	<province name="安徽" display="true" match="anhui">
+		<city capital="true" code="0551" match="hefei">合肥</city>
+		<city code="0553" match="wuhu">芜湖</city> 
+		<city code="0556" match="anqing">安庆</city>
+		<city code="0552" match="bengbu">蚌埠</city> 
+		<city code="0558" match="bozhou">亳州</city>
+		<city code="0565" match="chaohu">巢湖</city>
+		<city code="0566" match="chizhou">池州</city>
+		<city code="0550" match="chuzhou">滁州</city>
+		<city code="1558" match="fuyang">阜阳</city>
+		<city code="0559" match="huangshan">黄山</city>
+		<city code="0561" match="huaibei">淮北</city>
+		<city code="0554" match="huainan">淮南</city>
+		<city code="0564" match="liuan">六安</city>
+		<city code="0555" match="maanshan">马鞍山</city>
+		<city code="0557" match="suzhou">宿州</city>
+		<city code="0562" match="tongling">铜陵</city>
+		<city code="0563" match="xuancheng">宣城</city>
+	</province>
+	<province name="福建" display="true" match="fujian">
+		<city capital="true" code="0591" match="fuzhou">福州</city>
+		<city code="0592" match="xiamen">厦门</city>
+		<city code="0595" match="quanzhou">泉州</city>
+		<city code="0597" match="longyan">龙岩</city>
+		<city code="0593" match="ningde">宁德</city>
+		<city code="0599" match="nanping">南平</city>
+		<city code="0594" match="putian">莆田</city>
+		<city code="0598" match="sanming">三明</city>
+		<city code="0596" match="zhangzhou">漳州</city>
+	</province>
+	<province name="甘肃" display="true" match="gansu">
+		<city capital="true" code="0931" match="lanzhou">兰州</city>
+		<city code="0943" match="baiyin">白银</city>
+		<city code="0932" match="dingxi">定西</city>
+		<city code="0935" match="jinchang">金昌</city>
+		<city code="0937" match="jiuquan">酒泉</city>
+		<city code="0933" match="pingliang">平凉</city>
+		<city code="0934" match="qingyang">庆阳</city>
+		<city code="1935" match="wuwei">武威</city>
+		<city code="0938" match="tianshui">天水</city>
+		<city code="0936" match="zhangye">张掖</city>
+		<city code="0941" match="gannan">甘南</city>
+		<city code="1937" match="jiayuguan">嘉峪关</city>
+		<city code="0930" match="linxia">临夏</city>
+		<city code="2935" match="longnan">陇南</city>
+	</province>
+	<province name="广东" display="true" match="guangdong">
+		<city capital="true" code="020" match="guangzhou">广州</city>
+		<city code="0755" match="shenzhen">深圳</city>
+		<city code="0756" match="zhuhai">珠海</city>
+		<city code="0769" match="dongguan">东莞</city>
+		<city code="0757" match="foshan">佛山</city>
+		<city code="0752" match="huizhou">惠州</city>
+		<city code="0750" match="jiangmen">江门</city>
+		<city code="0760" match="zhongshan">中山</city>
+		<city code="0754" match="shantou">汕头</city>
+		<city code="0759" match="zhanjiang">湛江</city>
+		<city code="0768" match="chaozhou">潮州</city>
+		<city code="0762" match="heyuan">河源</city>
+		<city code="0663" match="jieyang">揭阳</city>
+		<city code="0668" match="maoming">茂名</city>
+		<city code="0753" match="meizhou">梅州</city>
+		<city code="0763" match="qingyuan">清远</city>
+		<city code="0751" match="shaoguan">韶关</city>
+		<city code="0660" match="shanwei">汕尾</city>
+		<city code="0662" match="yangjiang">阳江</city>
+		<city code="0766" match="yunfu">云浮</city>
+		<city code="0758" match="zhaoqing">肇庆</city>
+	</province>
+	<province name="广西" display="true" match="guangxi">
+		<city capital="true" code="0771" match="nanning">南宁</city>
+		<city code="0779" match="beihai">北海</city>
+		<city code="0770" match="fangchenggang">防城港</city>
+		<city code="0773" match="guilin">桂林</city>
+		<city code="0772" match="liuzhou">柳州</city>
+		<city code="1771" match="chongzuo">崇左</city>
+		<city code="1772" match="laibin">来宾</city>
+		<city code="0774" match="wuzhou">梧州</city>
+		<city code="0778" match="hechi">河池</city>
+		<city code="0775" match="yulin">玉林</city>
+		<city code="1755" match="guigang">贵港</city>
+		<city code="1774" match="hezhou">贺州</city>
+		<city code="0777" match="qinzhou">钦州</city>
+		<city code="0776" match="baise">百色</city>
+	</province>
+	<province name="贵州" display="true" match="guizhou">
+		<city capital="true" code="0851" match="guiyang">贵阳</city>
+		<city code="0853" match="anshun">安顺</city>
+		<city code="0852" match="zunyi">遵义</city>
+		<city code="0858" match="liupanshui">六盘水</city>
+		<city code="0857" match="bijie">毕节</city>
+		<city code="0855" match="qiandongnan">黔东南</city>
+		<city code="0859" match="qianxinan">黔西南</city>
+		<city code="0854" match="qiannan">黔南</city>
+		<city code="0856" match="tongren">铜仁</city>
+	</province>
+	<province name="海南" display="true" match="hainan">
+		<city capital="true" code="0898" match="haikou">海口</city>
+		<city code="0899" match="sanya">三亚</city>
+		<city code="0802" match="baisha">白沙</city>
+		<city code="0801" match="baoting">保亭</city>
+		<city code="0803" match="changjiang">昌江</city>
+		<city code="0804" match="chengmai">澄迈</city>
+		<city code="0806" match="dingan">定安</city>
+		<city code="0807" match="dongfang">东方</city>
+		<city code="2802" match="ledong">乐东</city>
+		<city code="1896" match="lingao">临高</city>
+		<city code="0809" match="lingshui">陵水</city>
+		<city code="1894" match="qionghai">琼海</city>
+		<city code="1899" match="qiongzhong">琼中</city>
+		<city code="1892" match="tunchang">屯昌</city>
+		<city code="1898" match="wanning">万宁</city>
+		<city code="1893" match="wenchang">文昌</city>
+		<city code="1897" match="wuzhishan">五指山</city>
+		<city code="0805" match="danzhou">儋州</city>
+	</province>
+	<province name="河北" display="true" match="hebei">
+		<city capital="true" code="0311" match="shijiazhuang">石家庄</city>
+		<city code="0312" match="baoding">保定</city>
+		<city code="0314" match="chengde">承德</city>
+		<city code="0310" match="handan">邯郸</city>
+		<city code="0315" match="tangshan">唐山</city>
+		<city code="0335" match="qinhuangdao">秦皇岛</city>
+		<city code="0317" match="cangzhou">沧州</city>
+		<city code="0318" match="hengshui">衡水</city>
+		<city code="0316" match="langfang">廊坊</city>
+		<city code="0319" match="xingtai">邢台</city>
+		<city code="0313" match="zhangjiakou">张家口</city>
+	</province>
+	<province name="河南" display="true" match="henan">
+		<city capital="true" code="0371" match="zhengzhou">郑州</city>
+		<city code="0379" match="luoyang">洛阳</city>
+		<city code="0378" match="kaifeng">开封</city>
+		<city code="0374" match="xuchang">许昌</city>
+		<city code="0372" match="anyang">安阳</city>
+		<city code="0375" match="pingdingshan">平顶山</city>
+		<city code="0392" match="hebi">鹤壁</city>
+		<city code="0391" match="jiaozuo">焦作</city>
+		<city code="1391" match="jiyuan">济源</city>
+		<city code="0395" match="luohe">漯河</city>
+		<city code="0377" match="nanyang">南阳</city>
+		<city code="0393" match="puyang">濮阳</city>
+		<city code="0398" match="sanmenxia">三门峡</city>
+		<city code="0370" match="shangqiu">商丘</city>
+		<city code="0373" match="xinxiang">新乡</city>
+		<city code="0376" match="xinyang">信阳</city>
+		<city code="0396" match="zhumadian">驻马店</city>
+		<city code="0394" match="zhoukou">周口</city>
+	</province>
+	<province name="黑龙江" display="true" match="heilongjiang">
+		<city capital="true" code="0451" match="haerbin">哈尔滨</city>
+		<city code="0459" match="daqing">大庆</city>
+		<city code="0452" match="qiqihaer">齐齐哈尔</city>
+		<city code="0454" match="jiamusi">佳木斯</city>
+		<city code="0457" match="daxinganling">大兴安岭</city>
+		<city code="0456" match="heihe">黑河</city>
+		<city code="0468" match="hegang">鹤岗</city>
+		<city code="0467" match="jixi">鸡西</city>
+		<city code="0453" match="mudanjiang">牡丹江</city>
+		<city code="0464" match="qitaihe">七台河</city>
+		<city code="0455" match="suihua">绥化</city>
+		<city code="0469" match="shuangyashan">双鸭山</city>
+		<city code="0458" match="yichun">伊春</city>
+	</province>
+	<province name="湖北" display="true" match="hubei">
+		<city capital="true" code="027" match="wuhan">武汉</city>
+		<city code="0710" match="xiangyang">襄阳</city>
+		<city code="0719" match="shiyan">十堰</city>
+		<city code="0714" match="huangshi">黄石</city>
+		<city code="0711" match="ezhou">鄂州</city>
+		<city code="0718" match="enshi">恩施</city>
+		<city code="0713" match="huanggang">黄冈</city>
+		<city code="0716" match="jingzhou">荆州</city>
+		<city code="0724" match="jingmen">荆门</city>
+		<city code="0722" match="suizhou">随州</city>
+		<city code="0717" match="yichang">宜昌</city>
+		<city code="1728" match="tianmen">天门</city>
+		<city code="2728" match="qianjiang">潜江</city>
+		<city code="0728" match="xiantao">仙桃</city>
+		<city code="0712" match="xiaogan">孝感</city>
+		<city code="0715" match="xianning">咸宁</city>
+		<city code="1719" match="shennongjia">神农架</city>
+	</province>
+	<province name="湖南" display="true" match="hunan">
+		<city capital="true" code="0731" match="changsha">长沙</city>
+		<city code="0730" match="yueyang">岳阳</city>
+		<city code="0732" match="xiangtan">湘潭</city>
+		<city code="0736" match="changde">常德</city>
+		<city code="0735" match="chenzhou">郴州</city>
+		<city code="0734" match="hengyang">衡阳</city>
+		<city code="0745" match="huaihua">怀化</city>
+		<city code="0738" match="loudi">娄底</city>
+		<city code="0739" match="shaoyang">邵阳</city>
+		<city code="0737" match="yiyang">益阳</city>
+		<city code="0746" match="yongzhou">永州</city>
+		<city code="0733" match="zhuzhou">株洲</city>
+		<city code="0744" match="zhangjiajie">张家界</city>
+		<city code="0743" match="xiangxi">湘西</city>
+	</province>
+	<province name="吉林" display="true" match="jilin">
+		<city capital="true" code="0431" match="changchun">长春</city>
+		<city code="0432" match="jilin">吉林</city>
+		<city code="1433" match="yanbian">延边</city>
+		<city code="0436" match="baicheng">白城</city>
+		<city code="0439" match="baishan">白山</city>
+		<city code="0437" match="liaoyuan">辽源</city>
+		<city code="0434" match="siping">四平</city>
+		<city code="0438" match="songyuan">松原</city>
+		<city code="0435" match="tonghua">通化</city>
+	</province>
+	<province name="江苏" display="true" match="jiangsu">
+		<city capital="true" code="025" match="nanjing">南京</city>
+		<city code="0512" match="suzhou">苏州</city>
+		<city code="0519" match="changzhou">常州</city>
+		<city code="0518" match="lianyungang">连云港</city>
+		<city code="0523" match="taizhou">泰州</city>
+		<city code="0510" match="wuxi">无锡</city>
+		<city code="0516" match="xuzhou">徐州</city>
+		<city code="0514" match="yangzhou">扬州</city>
+		<city code="0511" match="zhenjiang">镇江</city>
+		<city code="0517" match="huaian">淮安</city>
+		<city code="0513" match="nantong">南通</city>
+		<city code="0527" match="suqian">宿迁</city>
+		<city code="0515" match="yancheng">盐城</city>
+	</province>
+	<province name="江西" display="true" match="jiangxi">
+		<city capital="true" code="0791" match="nanchang">南昌</city>
+		<city code="0797" match="ganzhou">赣州</city>
+		<city code="0792" match="jiujiang">九江</city>
+		<city code="0798" match="jingdezhen">景德镇</city>
+		<city code="0796" match="jian">吉安</city>
+		<city code="0799" match="pingxiang">萍乡</city>
+		<city code="0793" match="shangrao">上饶</city>
+		<city code="0790" match="xinyu">新余</city>
+		<city code="0795" match="yichun">宜春</city>
+		<city code="0701" match="yingtan">鹰潭</city>
+		<city code="0794" match="fuzhou">抚州</city>
+	</province>
+	<province name="辽宁" display="true" match="liaoning">
+		<city capital="true" code="024" match="shenyang">沈阳</city>
+		<city code="0411" match="dalian">大连</city>
+		<city code="0412" match="anshan">鞍山</city>
+		<city code="0415" match="dandong">丹东</city>
+		<city code="0413" match="fushun">抚顺</city>
+		<city code="0416" match="jinzhou">锦州</city>
+		<city code="0417" match="yingkou">营口</city>
+		<city code="0414" match="benxi">本溪</city>
+		<city code="0421" match="chaoyang">朝阳</city>
+		<city code="0418" match="fuxin">阜新</city>
+		<city code="0429" match="huludao">葫芦岛</city>
+		<city code="0419" match="liaoyang">辽阳</city>
+		<city code="0427" match="panjin">盘锦</city>
+		<city code="0410" match="tieling">铁岭</city>
+	</province>
+	<province name="内蒙古" display="true" match="neimenggu">
+		<city capital="true" code="0471" match="huhehaote">呼和浩特</city>
+		<city code="0472" match="baotou">包头</city>
+		<city code="0476" match="chifeng">赤峰</city>
+		<city code="0477" match="eerduosi">鄂尔多斯</city>
+		<city code="0474" match="wulanchabu">乌兰察布</city>
+		<city code="0473" match="wuhai">乌海</city>
+		<city code="0482" match="xinganmeng">兴安盟</city>
+		<city code="0470" match="hulunbeier">呼伦贝尔</city>
+		<city code="0475" match="tongliao">通辽</city>
+		<city code="0483" match="alashanmeng">阿拉善盟</city>
+		<city code="0478" match="bayannaoer ">巴彦淖尔</city>
+		<city code="0479" match="xilinguole">锡林郭勒</city>
+	</province>
+	<province name="宁夏" display="true" match="ningxia">
+		<city capital="true" code="0951" match="yinchuan">银川</city>
+		<city code="0952" match="shizuishan">石嘴山</city>
+		<city code="0954" match="guyuan">固原</city>
+		<city code="0953" match="wuzhong">吴忠</city>
+		<city code="1953" match="zhongwei">中卫</city>
+	</province>
+	<province name="青海" display="true" match="qinghai">
+		<city capital="true" code="0971" match="xining">西宁</city>
+		<city code="0973" match="huangnan">黄南</city>
+		<city code="0976" match="yushu">玉树</city>
+		<city code="0975" match="guoluo">果洛</city>
+		<city code="0972" match="haidong">海东</city>
+		<city code="0977" match="haixi">海西</city>
+		<city code="0974" match="hainan">海南</city>
+		<city code="0970" match="haibei">海北</city>
+	</province>
+	<province name="山东" display="true" match="shandong">
+		<city capital="true" code="0531" match="jinan">济南</city>
+		<city code="0532" match="qingdao">青岛</city>
+		<city code="0631" match="weihai">威海</city>
+		<city code="0535" match="yantai">烟台</city>
+		<city code="0536" match="weifang">潍坊</city>
+		<city code="0538" match="taian">泰安</city>
+		<city code="0543" match="binzhou">滨州</city>
+		<city code="0534" match="dezhou">德州</city>
+		<city code="0546" match="dongying">东营</city>
+		<city code="0530" match="heze">菏泽</city>
+		<city code="0537" match="jining">济宁</city>
+		<city code="0635" match="liaocheng">聊城</city>
+		<city code="0539" match="linyi">临沂</city>
+		<city code="0634" match="laiwu">莱芜</city>
+		<city code="0633" match="rizhao">日照</city>
+		<city code="0533" match="zibo">淄博</city>
+		<city code="0632" match="zaozhuang">枣庄</city>
+	</province>
+	<province name="山西" display="true" match="shanxi">
+		<city capital="true" code="0351" match="taiyuan">太原</city>
+		<city code="0355" match="changzhi">长治</city>
+		<city code="0352" match="datong">大同</city>
+		<city code="0356" match="jincheng">晋城</city>
+		<city code="0354" match="jinzhong">晋中</city>
+		<city code="0357" match="linfen">临汾</city>
+		<city code="0358" match="lvliang">吕梁</city>
+		<city code="0349" match="shuozhou">朔州</city>
+		<city code="0350" match="xinzhou">忻州</city>
+		<city code="0359" match="yuncheng">运城</city>
+		<city code="0353" match="yangquan">阳泉</city>
+	</province>
+	<province name="陕西" display="true" match="shanxi">
+		<city capital="true" code="029" match="xian">西安</city>
+		<city code="0915" match="ankang">安康</city>
+		<city code="0917" match="baoji">宝鸡</city>
+		<city code="0916" match="hanzhong">汉中</city>
+		<city code="0914" match="shangluo">商洛</city>
+		<city code="0919" match="tongchuan">铜川</city>
+		<city code="0913" match="weinan">渭南</city>
+		<city code="0910" match="xianyang">咸阳</city>
+		<city code="0911" match="yanan">延安</city>
+		<city code="0912" match="yulin">榆林</city>
+	</province>
+	<province name="四川" display="true" match="sichuan">
+		<city capital="true" code="028" match="chengdu">成都</city>
+		<city code="0816" match="mianyang">绵阳</city>
+		<city code="0832" match="ziyang">资阳</city>
+		<city code="0827" match="bazhong">巴中</city>
+		<city code="0838" match="deyang">德阳</city>
+		<city code="0818" match="dazhou">达州</city>
+		<city code="0826" match="guangan">广安</city>
+		<city code="0839" match="guangyuan">广元</city>
+		<city code="0833" match="leshan">乐山</city>
+		<city code="0830" match="luzhou">泸州</city>
+		<city code="1833" match="meishan">眉山</city>
+		<city code="1832" match="neijiang">内江</city>
+		<city code="0817" match="nanchong">南充</city>
+		<city code="0812" match="panzhihua">攀枝花</city>
+		<city code="0825" match="suining">遂宁</city>
+		<city code="0831" match="yibin">宜宾</city>
+		<city code="0835" match="yaan">雅安</city>
+		<city code="0813" match="zigong">自贡</city>
+		<city code="0837" match="aba">阿坝</city>
+		<city code="0836" match="ganzi">甘孜</city>
+		<city code="0834" match="liangshan">凉山</city>
+	</province>
+	<province name="西藏" display="true" match="xizang">
+		<city capital="true" code="0891" match="lasa">拉萨</city>
+		<city code="0892" match="rikaze">日喀则</city>
+		<city code="0897" match="ali">阿里</city>
+		<city code="0895" match="changdu">昌都</city>
+		<city code="0894" match="linzhi">林芝</city>
+		<city code="0896" match="naqu">那曲</city>
+		<city code="0893" match="shannan">山南</city>
+	</province>
+	<province name="新疆" display="true" match="xinjiang">
+		<city capital="true" code="0991" match="wulumuqi">乌鲁木齐</city>
+		<city code="0993" match="shihezi">石河子</city>
+		<city code="0995" match="tulufan">吐鲁番</city>
+		<city code="0999" match="yili">伊犁</city>
+		<city code="0997" match="akesu">阿克苏</city>
+		<city code="0906" match="aletai">阿勒泰</city>
+		<city code="0996" match="bayin">巴音</city>
+		<city code="0909" match="boertala">博尔塔拉</city>
+		<city code="0994" match="changji">昌吉</city>
+		<city code="0902" match="hami">哈密</city>
+		<city code="0903" match="hetian">和田</city>
+		<city code="0998" match="kashi">喀什</city>
+		<city code="0990" match="kelamayi">克拉玛依</city>
+		<city code="0908" match="kezile">克孜勒</city>
+		<city code="0901" match="tacheng">塔城</city>
+	</province>
+	<province name="云南" display="true" match="yunnan">
+		<city capital="true" code="0871" match="kunming">昆明</city>
+		<city code="0877" match="yuxi">玉溪</city>
+		<city code="0878" match="chuxiong">楚雄</city>
+		<city code="0872" match="dali">大理</city>
+		<city code="0873" match="honghe">红河</city>
+		<city code="0874" match="qujing">曲靖</city>
+		<city code="0691" match="xishuangbanna">西双版纳</city>
+		<city code="0870" match="zhaotong">昭通</city>
+		<city code="0875" match="baoshan">保山</city>
+		<city code="0692" match="dehong">德宏</city>
+		<city code="0887" match="diqing">迪庆</city>
+		<city code="0888" match="lijiang">丽江</city>
+		<city code="0883" match="lincang">临沧</city>
+		<city code="0886" match="nujiang">怒江</city>
+		<city code="0879" match="puer">普洱</city>
+		<city code="0876" match="wenshan">文山</city>
+	</province>
+	<province name="浙江" display="true" match="zhejiang">
+		<city capital="true" code="0571" match="hangzhou">杭州</city>
+		<city code="0574" match="ningbo">宁波</city>
+		<city code="0573" match="jiaxing">嘉兴</city>
+		<city code="0575" match="shaoxing">绍兴</city>
+		<city code="0577" match="wenzhou">温州</city>
+		<city code="0580" match="zhoushan">舟山</city>
+		<city code="0572" match="huzhou">湖州</city>
+		<city code="0579" match="jinhua">金华</city>
+		<city code="0578" match="lishui">丽水</city>
+		<city code="0576" match="taizhou">台州</city>
+		<city code="0570" match="quzhou">衢州</city>
+	</province>
+</regions>

@@ -14,26 +14,23 @@
         android:text="Http"
         android:id="@+id/button"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:text="new api"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true"
         android:id="@+id/btn_newapi"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/button" />
 
     <Button
         android:text="greendao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_newapi"
-        android:layout_alignParentLeft="true"
         android:id="@+id/btn_greendao"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btn_newapi" />
 
     <Button
         android:text="update_app"
@@ -42,61 +39,65 @@
         android:layout_below="@+id/btn_greendao"
         android:layout_alignParentLeft="true"
         android:id="@+id/btn_update_app"
-        android:layout_alignParentRight="true" />
+        android:layout_toLeftOf="@+id/btn_newapi" />
 
     <Button
         android:text="Zxing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_update_app"
-        android:layout_alignParentLeft="true"
         android:id="@+id/btn_scan"
-        android:layout_alignParentRight="true" />
+        android:layout_below="@+id/button"
+        android:layout_toRightOf="@+id/button" />
 
     <Button
         android:text="xml"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
         android:id="@+id/btn_xml"
-        android:layout_alignParentRight="true" />
+        android:layout_alignBaseline="@+id/btn_scan"
+        android:layout_alignBottom="@+id/btn_scan"
+        android:layout_toRightOf="@+id/btn_scan" />
 
     <Button
         android:text="TAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_xml"
-        android:layout_alignParentLeft="true"
         android:id="@+id/btn_tab"
-        android:layout_alignParentRight="true" />
+        android:layout_below="@+id/btn_scan"
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:text="DIALOG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_tab"
-        android:layout_alignParentLeft="true"
         android:id="@+id/btn_dialog"
-        android:layout_alignParentRight="true" />
+        android:layout_alignBaseline="@+id/btn_tab"
+        android:layout_alignBottom="@+id/btn_tab"
+        android:layout_toRightOf="@+id/btn_update_app" />
 
     <Button
         android:text="lottie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_dialog"
-        android:layout_alignParentLeft="true"
         android:id="@+id/btn_lottie"
-        android:layout_alignParentRight="true" />
+        android:layout_below="@+id/btn_scan"
+        android:layout_toRightOf="@+id/btn_dialog" />
 
     <Button
-        android:id="@+id/btn_tools"
+        android:id="@+id/btn_rxjava"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/btn_lottie"
-        android:text="tools" />
+        android:layout_below="@+id/btn_tab"
+        android:text="rxjava" />
+
+    <Button
+        android:id="@+id/btn_xmljx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_rxjava"
+        android:layout_toLeftOf="@+id/btn_lottie"
+        android:text="xml解析" />
 
 
 </RelativeLayout>
