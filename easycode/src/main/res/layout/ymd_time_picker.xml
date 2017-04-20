@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <TextView
         android:id="@+id/picker_title"
@@ -42,9 +43,10 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <com.easycode.view.timepick.WheelView
+            <com.aigestudio.wheelpicker.WheelPicker
                 android:id="@+id/year"
-                style="@style/wheelViewStyle" />
+                style="@style/wheelViewStyle"
+                />
         </LinearLayout>
 
         <View
@@ -59,9 +61,10 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <com.easycode.view.timepick.WheelView
+            <com.aigestudio.wheelpicker.WheelPicker
                 android:id="@+id/month"
-                style="@style/wheelViewStyle" />
+                style="@style/wheelViewStyle"
+                app:wheel_maximum_width_text="500dp"/>
         </LinearLayout>
 
         <View
@@ -76,7 +79,7 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <com.easycode.view.timepick.WheelView
+            <com.aigestudio.wheelpicker.WheelPicker
                 android:id="@+id/day"
                 style="@style/wheelViewStyle" />
         </LinearLayout>
@@ -93,7 +96,7 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <com.easycode.view.timepick.WheelView
+            <com.aigestudio.wheelpicker.WheelPicker
                 android:id="@+id/hour"
                 style="@style/wheelViewStyle" />
         </LinearLayout>
@@ -109,7 +112,7 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <com.easycode.view.timepick.WheelView
+            <com.aigestudio.wheelpicker.WheelPicker
                 android:id="@+id/min"
                 style="@style/wheelViewStyle" />
         </LinearLayout>

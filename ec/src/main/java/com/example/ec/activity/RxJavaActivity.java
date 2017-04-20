@@ -2,17 +2,28 @@ package com.example.ec.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.easycode.util.L;
 import com.example.ec.R;
 
 import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
 
+import io.reactivex.BackpressureStrategy;
+import io.reactivex.Flowable;
+import io.reactivex.FlowableEmitter;
+import io.reactivex.FlowableOnSubscribe;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Action;
+import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
+import io.reactivex.schedulers.Schedulers;
 
 //import rx.Observable;
 //import rx.Observer;
@@ -25,42 +36,119 @@ public class RxJavaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_java);
 
-        Observable<Integer> observable = Observable.create(new ObservableOnSubscribe<Integer>() {
+//        Observable<Integer> observable = Observable.create(new ObservableOnSubscribe<Integer>() {
+//            @Override
+//            public void subscribe(ObservableEmitter<Integer> e) throws Exception {
+//                e.onNext(1);
+//                e.onNext(2);
+//                e.onNext(3);
+//                e.onNext(4);
+//                e.onComplete();
+//            }
+//
+//        });
+//
+//
+//        Observer<Integer> observer = new Observer<Integer>() {
+//
+//            @Override
+//            public void onSubscribe(Disposable d) {
+//                L.d("onSubscribe", "subscribe");
+//            }
+//
+//            @Override
+//            public void onNext(Integer value) {
+//                L.d("onNext", value.toString());
+//            }
+//
+//            @Override
+//            public void onError(Throwable e) {
+//                L.d("onError", "onError");
+//            }
+//
+//            @Override
+//            public void onComplete() {
+//                L.d("onComplete", "onComplete");
+//            }
+//        };
+//        observable.subscribe(observer);
+
+
+//        Observable.create(new ObservableOnSubscribe<String>() {
+//
+//            @Override
+//            public void subscribe(ObservableEmitter<String> e) throws Exception {
+//                Log.v("rx_call", Thread.currentThread().getName());
+//                L.v("subscribe");
+//                e.onNext("dd");
+//                e.onComplete();
+//            }
+//        }).subscribeOn(Schedulers.newThread())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .map(new Function<String, String>() {
+//                    @Override
+//                    public String apply(String s) throws Exception {
+//                        Log.v("rx_map", Thread.currentThread().getName());
+//                        L.v(s + "----dd");
+//                        return s + "88";
+//                    }
+//                }).subscribe(new Consumer<String>() {
+//
+//            @Override
+//            public void accept(String s) throws Exception {
+//                Log.v("rx_subscribe", Thread.currentThread().getName());
+//                L.v(s + "----dd2");
+//            }
+//        });
+
+        Flowable.create(new FlowableOnSubscribe<String>() {
+
             @Override
-            public void subscribe(ObservableEmitter<Integer> e) throws Exception {
-                e.onNext(1);
-                e.onNext(2);
-                e.onNext(3);
-                e.onNext(4);
+            public void subscribe(FlowableEmitter<String> e) throws Exception {
+                e.onNext("exception:" + "123");
                 e.onComplete();
             }
+        }, BackpressureStrategy.BUFFER)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<String>() {
+                    @Override
+                    public void onSubscribe(Subscription s) {
 
-        });
+                    }
 
+                    @Override
+                    public void onNext(String s) {
 
-        Observer<Integer> observer = new Observer<Integer>() {
+                    }
 
-            @Override
-            public void onSubscribe(Disposable d) {
-                L.d("onSubscribe", "subscribe");
-            }
+                    @Override
+                    public void onError(Throwable t) {
 
-            @Override
-            public void onNext(Integer value) {
-                L.d("onNext", value.toString());
-            }
+                    }
 
-            @Override
-            public void onError(Throwable e) {
-                L.d("onError", "onError");
-            }
+                    @Override
+                    public void onComplete() {
 
-            @Override
-            public void onComplete() {
-                L.d("onComplete", "onComplete");
-            }
-        };
-        observable.subscribe(observer);
+                    }
+                });
+
 
     }
+
+
 }
+//                .map(new Func1<String, String >() {
+//                    @Override
+//                    public String call(String s) {
+//                        Logger.v( "rx_map" , Thread.currentThread().getName()  );
+//                        return s + "88";
+//                    }
+//                })
+//                .subscribe(new Action1<String>() {
+//                    @Override
+//                    public void call(String s) {
+//                        Logger.v( "rx_subscribe" , Thread.currentThread().getName()  );
+//                    }
+//                }
+//                ) ;

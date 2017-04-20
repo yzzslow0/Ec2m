@@ -30,13 +30,14 @@
         android:layout_alignParentRight="true" />
 
     <Button
-        android:text="文件下载"
+        android:id="@+id/btn_download"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_update"
         android:layout_alignParentLeft="true"
-        android:id="@+id/btn_download"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_update"
+        android:elevation="0dp"
+        android:text="文件下载" />
 
     <Button
         android:text="普通请求"

@@ -99,5 +99,13 @@
         android:layout_toLeftOf="@+id/btn_lottie"
         android:text="xml解析" />
 
+    <Button
+        android:id="@+id/btn_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_lottie"
+        android:layout_toRightOf="@+id/btn_dialog"
+        android:text="TimePicker" />
+
 
 </RelativeLayout>

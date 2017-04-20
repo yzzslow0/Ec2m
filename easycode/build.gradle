@@ -54,6 +54,8 @@ dependencies {
     //        compile 'io.reactivex.rxjava2:rxjava:2.0.1'
     //    compile 'io.reactivex:rxandroid:1.2.1'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+
+    compile 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2' //
 }
 //指令
 //gradlew install

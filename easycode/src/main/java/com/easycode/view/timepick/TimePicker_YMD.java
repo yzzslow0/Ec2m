@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.aigestudio.wheelpicker.WheelPicker;
 import com.easycode.R;
 
 import java.util.ArrayList;
@@ -23,11 +24,11 @@ public class TimePicker_YMD extends LinearLayout {
     private static final int CHANGE_DAY_DATA = 0x114;
 
     private TextView mPickerTitle;
-    private WheelView mWheelYear;
-    private WheelView mWheelMonth;
-    private WheelView mWheelDay;
-    private WheelView mWheelHour;
-    private WheelView mWheelMin;
+    private WheelPicker mWheelYear;
+    private WheelPicker mWheelMonth;
+    private WheelPicker mWheelDay;
+    private WheelPicker mWheelHour;
+    private WheelPicker mWheelMin;
 
     private int mDay, Day;
     private int mHour, Hour;
@@ -53,16 +54,23 @@ public class TimePicker_YMD extends LinearLayout {
         super.onFinishInflate();
         LayoutInflater.from(getContext()).inflate(R.layout.ymd_time_picker, this);
         mPickerTitle = (TextView) findViewById(R.id.picker_title);
-        mWheelYear = (WheelView) findViewById(R.id.year);
-        mWheelMonth = (WheelView) findViewById(R.id.month);
-        mWheelDay = (WheelView) findViewById(R.id.day);
-        mWheelHour = (WheelView) findViewById(R.id.hour);
-        mWheelMin = (WheelView) findViewById(R.id.min);
-        mWheelDay.setOnSelectListener(mDayListener);
-        mWheelHour.setOnSelectListener(mHourListener);
-        mWheelMin.setOnSelectListener(mMinListener);
-        mWheelYear.setOnSelectListener(mYearListener);
-        mWheelMonth.setOnSelectListener(mMonthListener);
+        mWheelYear = (WheelPicker) findViewById(R.id.year);
+        mWheelMonth = (WheelPicker) findViewById(R.id.month);
+        mWheelDay = (WheelPicker) findViewById(R.id.day);
+        mWheelHour = (WheelPicker) findViewById(R.id.hour);
+        mWheelMin = (WheelPicker) findViewById(R.id.min);
+//        mWheelDay.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener) mDayListener);
+//        mWheelDay.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener) mDayListener);
+//        mWheelHour.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener)mHourListener);
+//        mWheelMin.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener) mMinListener);
+//        mWheelYear.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener) mYearListener);
+//        mWheelMonth.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener) mMonthListener);
+        mWheelYear.setCurtain(true);
+        mWheelMonth.setCurtain(true);
+        mWheelDay.setCurtain(true);
+        mWheelHour.setCurtain(true);
+        mWheelMin.setCurtain(true);
+
 
         linearLayout_min = (LinearLayout) findViewById(R.id.linearLayout_min);
         linearLayout_hour = (LinearLayout) findViewById(R.id.linearLayout_hour);
@@ -100,11 +108,12 @@ public class TimePicker_YMD extends LinearLayout {
         Day=mDay;
         Month=mMonth;
         Min=mMin;
-        mWheelYear.setDefault(10);
-        mWheelMonth.setDefault(mMonth-1);
-        mWheelDay.setDefault(mDay-1);
-        mWheelHour.setDefault(mHour);
-        mWheelMin.setDefault(mMin);
+
+        mWheelYear.setSelectedItemPosition(10);
+        mWheelMonth.setSelectedItemPosition(mMonth-1);
+        mWheelDay.setSelectedItemPosition(mDay-1);
+        mWheelHour.setSelectedItemPosition(mHour);
+        mWheelMin.setSelectedItemPosition(mMin);
 
 
     }
@@ -266,12 +275,12 @@ public class TimePicker_YMD extends LinearLayout {
             super.handleMessage(msg);
             switch (msg.what) {
                 case CHANGE_MOUTH_DATA:
-                    mWheelMonth.setDefault(0);
+//                    mWheelMonth.setDefault(0);
                     break;
 
                 case CHANGE_DAY_DATA:
-                    if(Day!=0&&mWheelDay.getListSize()>0)
-                        mWheelDay.setDefault(0);
+//                    if(Day!=0&&mWheelDay.getListSize()>0)
+//                        mWheelDay.setDefault(0);
                     break;
 
                 case 0:

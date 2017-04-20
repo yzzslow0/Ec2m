@@ -61,6 +61,7 @@ public class MRetrofit {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                 .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
+//                .sslSocketFactory(SSLHelper.getSSLCertifcation(context))//为OkHttp对象设置SocketFactory用于双向认证
                 .addInterceptor(new BaseInterceptor(headers))
                 .addInterceptor(new AddCookiesInterceptor(context))
                 .addInterceptor(new SaveCookiesInterceptor(context))

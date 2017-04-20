@@ -40,7 +40,8 @@
         <activity android:name=".activity.DialogActivity" />
         <activity android:name=".newapi.DataBindActivity" />
         <activity android:name=".activity.RxJavaActivity" />
-        <activity android:name=".activity.XmlJxActivity"></activity>
+        <activity android:name=".activity.XmlJxActivity" />
+        <activity android:name=".activity.TimePickerActivity"></activity>
     </application>
 
 </manifest>
