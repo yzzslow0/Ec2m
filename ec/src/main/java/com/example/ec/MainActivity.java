@@ -16,9 +16,9 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.easycode.event.UpdataEvent;
 import com.easycode.util.PreferencesUtils;
-import com.easycode.view.timepick.TimePicker;
 import com.example.ec.activity.CustomScanActivity;
 import com.example.ec.activity.DialogActivity;
+import com.example.ec.activity.ExpandableItemActivity;
 import com.example.ec.activity.HttpTestActivity;
 import com.example.ec.activity.NewMenuActivity;
 import com.example.ec.activity.RxJavaActivity;
@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnXmljx;
     @BindView(R.id.btn_time)
     Button btnTime;
+    @BindView(R.id.btn_recycle_ex)
+    Button btnRecycleEx;
 
 
     private Map<String, String> params = new HashMap<>();
@@ -98,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.button, R.id.btn_newapi, R.id.btn_greendao,
             R.id.btn_update_app, R.id.btn_scan, R.id.btn_xml,
             R.id.btn_tab, R.id.btn_dialog, R.id.btn_lottie, R.id.btn_rxjava,
-            R.id.btn_xmljx, R.id.btn_time})
+            R.id.btn_xmljx, R.id.btn_time,R.id.btn_recycle_ex})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
@@ -136,6 +138,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_time:
                 startActivity(new Intent(this, TimePickerActivity.class));
+                break;
+            case R.id.btn_recycle_ex:
+                startActivity(new Intent(this,ExpandableItemActivity.class));
                 break;
         }
     }

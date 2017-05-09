@@ -107,5 +107,13 @@
         android:layout_toRightOf="@+id/btn_dialog"
         android:text="TimePicker" />
 
+    <Button
+        android:id="@+id/btn_recycle_ex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_rxjava"
+        android:text="ExpandableItem" />
+
 
 </RelativeLayout>
