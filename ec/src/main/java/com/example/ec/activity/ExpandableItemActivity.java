@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.example.ec.R;
@@ -17,8 +16,6 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
-import java.util.IllegalFormatCodePointException;
-import java.util.Random;
 
 public class ExpandableItemActivity extends Activity {
 
@@ -92,7 +89,6 @@ public class ExpandableItemActivity extends Activity {
                 }
             }
 
-
             for (int i=0;i<mlv0.getSubItems().size();i++){
 
                 if (!mlv0.getSubItems().get(i).isSelected){
@@ -101,14 +97,12 @@ public class ExpandableItemActivity extends Activity {
                 }else {
                     isAllselected = true;
                 }
-
             }
             if (isAllselected){
                 mlv0.isSelected=true;
             }else {
                 mlv0.isSelected=false;
             }
-
 
         }
         adapter.notifyDataSetChanged();
