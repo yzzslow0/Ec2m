@@ -84,7 +84,7 @@ public class ExpandableItemAdapter extends BaseMultiItemQuickAdapter<MultiItemEn
                             }
 
                         }
-                        EventBus.getDefault().post(new RecycleEvent());
+                        EventBus.getDefault().post(new RecycleEvent(RecycleEvent.REFRESH,"",pos));
 
                     }
                 });
@@ -105,12 +105,13 @@ public class ExpandableItemAdapter extends BaseMultiItemQuickAdapter<MultiItemEn
                 holder.itemView.findViewById(R.id.cb_item1).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        int pos = holder.getAdapterPosition();
+                        holder.getAssociatedObject();
                         if (lv1.isSelected){
                             lv1.isSelected=false;
                         }else {
                             lv1.isSelected=true;
                         }
+                        EventBus.getDefault().post(new RecycleEvent(RecycleEvent.LEVEL_1,"",lv1.msuper));
                     }
                 });
                 break;

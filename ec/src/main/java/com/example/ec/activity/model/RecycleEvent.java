@@ -6,8 +6,17 @@ package com.example.ec.activity.model;
 
 public class RecycleEvent {
     public static int REFRESH = 0;
+    public static int LEVEL_1= 0x01;
     private int state;
     private String result;
+    private int position;
+
+    public RecycleEvent(int state, String result, int position) {
+        this.state = state;
+        this.result = result;
+        this.position = position;
+    }
+
 
     public int getState() {
         return state;
@@ -23,5 +32,13 @@ public class RecycleEvent {
 
     public void setResult(String result) {
         this.result = result;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
     }
 }

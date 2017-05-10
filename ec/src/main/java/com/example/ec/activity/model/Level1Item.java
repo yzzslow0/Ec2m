@@ -12,11 +12,13 @@ public class Level1Item implements MultiItemEntity {
     public String title;
     public String subTitle;
     public boolean isSelected;
+    public int msuper;
 
-    public Level1Item(String title, String subTitle, boolean isSelected) {
+    public Level1Item(String title, String subTitle, boolean isSelected,int msuper) {
         this.title = title;
         this.subTitle = subTitle;
         this.isSelected = isSelected;
+        this.msuper = msuper;
     }
 
 
