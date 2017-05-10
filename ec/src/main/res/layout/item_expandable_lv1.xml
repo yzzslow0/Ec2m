@@ -4,6 +4,7 @@
     android:layout_height="80dp"
     android:orientation="horizontal"
     android:gravity="center_vertical"
+    android:paddingLeft="80dp"
     android:layout_marginBottom="1dp"
     >
     <ImageView
@@ -15,15 +16,16 @@
         android:visibility="gone"
         android:paddingRight="20dp"
         />
+
     <TextView
         android:id="@+id/tv_item1_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
         android:layout_weight="1"
-        />
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/tv_item1_content"
         android:layout_width="wrap_content"
@@ -43,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right|center"
+        android:visibility="gone"
         android:layout_weight="3"
         android:src="@mipmap/arrow_r"/>
 </LinearLayout>
