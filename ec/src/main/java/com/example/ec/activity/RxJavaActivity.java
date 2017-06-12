@@ -101,42 +101,78 @@ public class RxJavaActivity extends AppCompatActivity {
 //            }
 //        });
 
-        Flowable.create(new FlowableOnSubscribe<String>() {
+//        Flowable.create(new FlowableOnSubscribe<String>() {
+//
+//            @Override
+//            public void subscribe(FlowableEmitter<String> e) throws Exception {
+//                e.onNext("exception:" + "123");
+//                e.onComplete();
+//            }
+//        }, BackpressureStrategy.BUFFER)
+//                .subscribeOn(Schedulers.newThread())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Subscriber<String>() {
+//                    @Override
+//                    public void onSubscribe(Subscription s) {
+//                        Log.i("onSubscribe", Thread.currentThread().getName());
+//                    }
+//
+//                    @Override
+//                    public void onNext(String s) {
+//                        Log.i("onNext", Thread.currentThread().getName());
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable t) {
+//                        Log.i("onError", Thread.currentThread().getName());
+//                    }
+//
+//                    @Override
+//                    public void onComplete() {
+//                        Log.i("onComplete", Thread.currentThread().getName());
+//                    }
+//                });
+//
+//
+//    }
+
+        //创建一个上游 Observable：
+        Observable<Integer> observable = Observable.create(new ObservableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
+                emitter.onNext(1);
+                emitter.onNext(2);
+                emitter.onNext(3);
+                emitter.onComplete();
+            }
+        });
+        //创建一个下游 Observer
+        Observer<Integer> observer = new Observer<Integer>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+                Log.d("onSubscribe", "subscribe");
+            }
 
             @Override
-            public void subscribe(FlowableEmitter<String> e) throws Exception {
-                e.onNext("exception:" + "123");
-                e.onComplete();
+            public void onNext(Integer value) {
+                Log.d("onSubscribe", "" + value);
             }
-        }, BackpressureStrategy.BUFFER)
-                .subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<String>() {
-                    @Override
-                    public void onSubscribe(Subscription s) {
 
-                    }
+            @Override
+            public void onError(Throwable e) {
+                Log.d("onSubscribe", "error");
+            }
 
-                    @Override
-                    public void onNext(String s) {
-
-                    }
-
-                    @Override
-                    public void onError(Throwable t) {
-
-                    }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                });
+            @Override
+            public void onComplete() {
+                Log.d("onSubscribe", "complete");
+            }
+        };
+        //建立连接
+        observable.subscribe(observer);
 
 
     }
-
-
 }
 //                .map(new Func1<String, String >() {
 //                    @Override

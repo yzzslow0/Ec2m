@@ -11,14 +11,17 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.easycode.event.UpdataEvent;
 import com.easycode.util.PreferencesUtils;
+import com.example.ec.activity.CamaraActivity;
 import com.example.ec.activity.CustomScanActivity;
 import com.example.ec.activity.DialogActivity;
 import com.example.ec.activity.ExpandableItemActivity;
+import com.example.ec.activity.FadeInTextActivity;
 import com.example.ec.activity.HttpTestActivity;
 import com.example.ec.activity.NewMenuActivity;
 import com.example.ec.activity.RxJavaActivity;
@@ -70,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnTime;
     @BindView(R.id.btn_recycle_ex)
     Button btnRecycleEx;
+    @BindView(R.id.btn_camara)
+    Button btnCamara;
 
 
     private Map<String, String> params = new HashMap<>();
@@ -100,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.button, R.id.btn_newapi, R.id.btn_greendao,
             R.id.btn_update_app, R.id.btn_scan, R.id.btn_xml,
             R.id.btn_tab, R.id.btn_dialog, R.id.btn_lottie, R.id.btn_rxjava,
-            R.id.btn_xmljx, R.id.btn_time,R.id.btn_recycle_ex})
+            R.id.btn_xmljx, R.id.btn_time, R.id.btn_recycle_ex, R.id.btn_camara,R.id.btn_fadeIntext})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
@@ -140,7 +145,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, TimePickerActivity.class));
                 break;
             case R.id.btn_recycle_ex:
-                startActivity(new Intent(this,ExpandableItemActivity.class));
+                startActivity(new Intent(this, ExpandableItemActivity.class));
+                break;
+            case R.id.btn_camara:
+                startActivity(new Intent(this, CamaraActivity.class));
+                break;
+            case R.id.btn_fadeIntext:
+                startActivity(new Intent(this, FadeInTextActivity.class));
                 break;
         }
     }

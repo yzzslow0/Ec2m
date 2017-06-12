@@ -19,14 +19,14 @@ public class ToastUtil {
 
 
     private static void Show(String content, int Short, int Show) {
-//        if (isDebug ) {
+        if (isDebug ) {
             if (Short == SHORT) {
                 toast = Toast.makeText(ContextHolder.getContext(), content + "", Toast.LENGTH_SHORT);
             } else {
                 toast = Toast.makeText(ContextHolder.getContext(), content + "", Toast.LENGTH_LONG);
             }
             toast.show();
-//        }
+        }
     }
 
 

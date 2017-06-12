@@ -8,112 +8,144 @@
     tools:context="com.example.ec.MainActivity">
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Http"
-        android:id="@+id/button"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true" />
 
-    <Button
-        android:text="new api"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_newapi"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/button" />
 
-    <Button
-        android:text="greendao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_greendao"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/btn_newapi" />
-
-    <Button
-        android:text="update_app"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_greendao"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:id="@+id/btn_update_app"
-        android:layout_toLeftOf="@+id/btn_newapi" />
+        android:layout_marginTop="12dp">
 
-    <Button
-        android:text="Zxing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_scan"
-        android:layout_below="@+id/button"
-        android:layout_toRightOf="@+id/button" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Http"
+                android:id="@+id/button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true" />
 
-    <Button
-        android:text="xml"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_xml"
-        android:layout_alignBaseline="@+id/btn_scan"
-        android:layout_alignBottom="@+id/btn_scan"
-        android:layout_toRightOf="@+id/btn_scan" />
+            <Button
+                android:text="new api"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_newapi"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/button" />
 
-    <Button
-        android:text="TAB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_tab"
-        android:layout_below="@+id/btn_scan"
-        android:layout_alignParentLeft="true" />
+            <Button
+                android:text="greendao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_greendao"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/btn_newapi" />
 
-    <Button
-        android:text="DIALOG"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_dialog"
-        android:layout_alignBaseline="@+id/btn_tab"
-        android:layout_alignBottom="@+id/btn_tab"
-        android:layout_toRightOf="@+id/btn_update_app" />
+            <Button
+                android:text="update_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_greendao"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/btn_update_app"
+                android:layout_toLeftOf="@+id/btn_newapi" />
 
-    <Button
-        android:text="lottie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_lottie"
-        android:layout_below="@+id/btn_scan"
-        android:layout_toRightOf="@+id/btn_dialog" />
+            <Button
+                android:text="Zxing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_scan"
+                android:layout_below="@+id/button"
+                android:layout_toRightOf="@+id/button" />
 
-    <Button
-        android:id="@+id/btn_rxjava"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/btn_tab"
-        android:text="rxjava" />
+            <Button
+                android:text="xml"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_xml"
+                android:layout_alignBaseline="@+id/btn_scan"
+                android:layout_alignBottom="@+id/btn_scan"
+                android:layout_toRightOf="@+id/btn_scan" />
 
-    <Button
-        android:id="@+id/btn_xmljx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btn_rxjava"
-        android:layout_toLeftOf="@+id/btn_lottie"
-        android:text="xml解析" />
+            <Button
+                android:text="TAB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_tab"
+                android:layout_below="@+id/btn_scan"
+                android:layout_alignParentLeft="true" />
 
-    <Button
-        android:id="@+id/btn_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_lottie"
-        android:layout_toRightOf="@+id/btn_dialog"
-        android:text="TimePicker" />
+            <Button
+                android:text="DIALOG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_dialog"
+                android:layout_alignBaseline="@+id/btn_tab"
+                android:layout_alignBottom="@+id/btn_tab"
+                android:layout_toRightOf="@+id/btn_update_app" />
 
-    <Button
-        android:id="@+id/btn_recycle_ex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/btn_rxjava"
-        android:text="ExpandableItem" />
+            <Button
+                android:text="lottie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_lottie"
+                android:layout_below="@+id/btn_scan"
+                android:layout_toRightOf="@+id/btn_dialog" />
+
+            <Button
+                android:id="@+id/btn_rxjava"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/btn_tab"
+                android:text="rxjava" />
+
+            <Button
+                android:id="@+id/btn_xmljx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/btn_rxjava"
+                android:layout_toLeftOf="@+id/btn_lottie"
+                android:text="xml解析" />
+
+            <Button
+                android:id="@+id/btn_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_lottie"
+                android:layout_toRightOf="@+id/btn_dialog"
+                android:text="TimePicker" />
+
+            <Button
+                android:id="@+id/btn_recycle_ex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/btn_rxjava"
+                android:text="ExpandableItem" />
+
+            <Button
+                android:id="@+id/btn_camara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_xmljx"
+                android:layout_toRightOf="@+id/btn_recycle_ex"
+                android:text="camara"
+                android:layout_weight="0.40" />
+
+            <Button
+                android:id="@+id/btn_fadeIntext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/btn_recycle_ex"
+                android:text="fadeIntext" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>

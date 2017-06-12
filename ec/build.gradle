@@ -31,7 +31,7 @@ buildscript {
     }
 }
 apply plugin: 'org.greenrobot.greendao'
-//apply plugin: 'com.antfortune.freeline'
+apply plugin: 'com.antfortune.freeline'
 
 greendao {
     schemaVersion 2//数据库版本号

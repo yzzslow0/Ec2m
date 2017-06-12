@@ -2,7 +2,6 @@ package com.easycode;
 
 import android.app.Application;
 
-import com.easycode.util.ContextHolder;
 
 /**
  * Created by yzz on 2016/11/15.

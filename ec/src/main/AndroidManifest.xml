@@ -42,7 +42,9 @@
         <activity android:name=".activity.RxJavaActivity" />
         <activity android:name=".activity.XmlJxActivity" />
         <activity android:name=".activity.TimePickerActivity" />
-        <activity android:name=".activity.ExpandableItemActivity"></activity>
+        <activity android:name=".activity.ExpandableItemActivity" />
+        <activity android:name=".activity.CamaraActivity" />
+        <activity android:name=".activity.FadeInTextActivity"></activity>
     </application>
 
 </manifest>
