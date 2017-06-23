@@ -38,7 +38,7 @@ public class AnimActivity extends AppCompatActivity {
     }
 
     private void lottieTest() {
-        animationView.setAnimation("fourball.json");
+        animationView.setAnimation("loading.json");
         animationView.addAnimatorUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {

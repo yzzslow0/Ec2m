@@ -28,7 +28,6 @@
         <activity android:name=".activity.HttpTestActivity" />
         <activity android:name=".activity.CustomScanActivity" />
         <activity android:name=".greendao.GreenDAOActivity" />
-        <activity android:name=".activity.NewApiMenu" />
 
         <service
             android:name="com.easycode.service.UpdateService"
@@ -44,7 +43,10 @@
         <activity android:name=".activity.TimePickerActivity" />
         <activity android:name=".activity.ExpandableItemActivity" />
         <activity android:name=".activity.CamaraActivity" />
-        <activity android:name=".activity.FadeInTextActivity"></activity>
+        <activity android:name=".activity.FadeInTextActivity" />
+        <activity android:name=".activity.ScrollerActivity"></activity>
+
+
     </application>
 
 </manifest>

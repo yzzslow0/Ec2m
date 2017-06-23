@@ -11,6 +11,7 @@ import com.easycode.BuildConfig;
 
 public class ToastUtil {
     private static boolean isDebug = BuildConfig.DEBUG;
+//    private static boolean isDebug =true;
     private static Toast toast;
     private static final int SHORT = 0x00;
     private static final int LONG = 0x01;

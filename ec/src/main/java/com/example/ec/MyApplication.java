@@ -3,6 +3,7 @@ package com.example.ec;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.easycode.BaseApplication;
+import com.easycode.retrofit.MRetrofit;
 import com.easycode.util.ContextHolder;
 import com.example.ec.green.DaoMaster;
 import com.example.ec.green.DaoSession;
@@ -18,6 +19,7 @@ public class MyApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        MRetrofit.IP = "http://172.16.0.167:8080";
 
         instances = this;
         ContextHolder.initial(this);

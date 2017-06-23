@@ -25,6 +25,7 @@ import com.example.ec.activity.FadeInTextActivity;
 import com.example.ec.activity.HttpTestActivity;
 import com.example.ec.activity.NewMenuActivity;
 import com.example.ec.activity.RxJavaActivity;
+import com.example.ec.activity.ScrollerActivity;
 import com.example.ec.activity.TabActivity;
 import com.example.ec.activity.TimePickerActivity;
 import com.example.ec.activity.XmlActivity;
@@ -105,7 +106,8 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.button, R.id.btn_newapi, R.id.btn_greendao,
             R.id.btn_update_app, R.id.btn_scan, R.id.btn_xml,
             R.id.btn_tab, R.id.btn_dialog, R.id.btn_lottie, R.id.btn_rxjava,
-            R.id.btn_xmljx, R.id.btn_time, R.id.btn_recycle_ex, R.id.btn_camara,R.id.btn_fadeIntext})
+            R.id.btn_xmljx, R.id.btn_time, R.id.btn_recycle_ex, R.id.btn_camara,
+            R.id.btn_fadeIntext,R.id.btn_scroller})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
@@ -152,6 +154,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_fadeIntext:
                 startActivity(new Intent(this, FadeInTextActivity.class));
+                break;
+            case R.id.btn_scroller:
+                startActivity(new Intent(this, ScrollerActivity.class));
                 break;
         }
     }
