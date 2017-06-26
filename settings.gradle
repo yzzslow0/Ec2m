@@ -1,1 +1,1 @@
-include ':easycode', ':ec', ':music2'
+include ':easycode', ':ec'
