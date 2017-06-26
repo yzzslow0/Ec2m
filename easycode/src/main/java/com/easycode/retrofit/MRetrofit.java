@@ -24,7 +24,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-//import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -35,19 +34,20 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MRetrofit {
 
 //    public static final String IP = "http://172.16.0.200";
-//    public static final String IP = "http://172.16.0.167";
-    public static String IP ="";
+    public  static String IP = "http://172.16.0.200";
     private static final int DEFAULT_TIMEOUT = 20;
     private static MRetrofit mInstance;
     private static Map<String,String> headers;
 
 
 
+
     public static MRetrofit getInstance() {
         if (mInstance == null) {
             synchronized (MRetrofit.class) {
-                if (mInstance == null)
+                if (mInstance == null) {
                     mInstance = new MRetrofit(ContextHolder.getContext(), headers);
+                }
             }
         }
         return mInstance;
@@ -55,9 +55,11 @@ public class MRetrofit {
 
     private RetrofitService retrofitService;
 
-    private MRetrofit(Context context,Map<String, String> headers) {
+    private MRetrofit(Context context, Map<String, String> headers) {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
+
+
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
@@ -132,7 +134,12 @@ public class MRetrofit {
 
     }
 
+    public String getIP() {
+        return IP;
+    }
 
-
+    public void setIP(String IP) {
+        this.IP = IP;
+    }
 
 }
