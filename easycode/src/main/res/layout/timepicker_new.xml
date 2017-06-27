@@ -10,7 +10,7 @@
       android:layout_gravity="center"
       android:gravity="center"
       android:layout_height="wrap_content">
-      <com.aigestudio.wheelpicker.WheelPicker
+      <com.easycode.view.timepick.WheelPicker_New
           android:id="@+id/wheel_year"
           android:layout_weight="1"
           app:wheel_item_text_color="#000000"
@@ -25,7 +25,7 @@
           app:wheel_item_align="right"
           app:wheel_item_text_size="24sp"/>
 
-      <com.aigestudio.wheelpicker.WheelPicker
+      <com.easycode.view.timepick.WheelPicker_New
           android:id="@+id/wheel_month"
           android:layout_weight="1"
           app:wheel_item_text_color="#000000"
@@ -40,7 +40,7 @@
           app:wheel_item_align="right"
           app:wheel_item_text_size="24sp"/>
 
-      <com.aigestudio.wheelpicker.WheelPicker
+      <com.easycode.view.timepick.WheelPicker_New
           android:id="@+id/wheel_day"
           android:layout_weight="1"
           app:wheel_item_text_color="#000000"
@@ -55,7 +55,7 @@
           app:wheel_item_align="right"
           app:wheel_item_text_size="24sp" />
 
-      <com.aigestudio.wheelpicker.WheelPicker
+      <com.easycode.view.timepick.WheelPicker_New
           android:id="@+id/wheel_hour"
           android:layout_weight="1"
           app:wheel_item_text_color="#000000"
@@ -70,7 +70,7 @@
           app:wheel_item_align="right"
           app:wheel_item_text_size="24sp" />
 
-      <com.aigestudio.wheelpicker.WheelPicker
+      <com.easycode.view.timepick.WheelPicker_New
           android:id="@+id/wheel_min"
           android:layout_weight="1"
           app:wheel_item_text_color="#000000"

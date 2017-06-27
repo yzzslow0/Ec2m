@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.aigestudio.wheelpicker.WheelPicker;
 import com.easycode.R;
 
 import java.util.ArrayList;
@@ -24,11 +23,11 @@ public class TimePicker_YMD extends LinearLayout {
     private static final int CHANGE_DAY_DATA = 0x114;
 
     private TextView mPickerTitle;
-    private WheelPicker mWheelYear;
-    private WheelPicker mWheelMonth;
-    private WheelPicker mWheelDay;
-    private WheelPicker mWheelHour;
-    private WheelPicker mWheelMin;
+    private WheelPicker_New mWheelYear;
+    private WheelPicker_New mWheelMonth;
+    private WheelPicker_New mWheelDay;
+    private WheelPicker_New mWheelHour;
+    private WheelPicker_New mWheelMin;
 
     private int mDay, Day;
     private int mHour, Hour;
@@ -54,17 +53,17 @@ public class TimePicker_YMD extends LinearLayout {
         super.onFinishInflate();
         LayoutInflater.from(getContext()).inflate(R.layout.ymd_time_picker, this);
         mPickerTitle = (TextView) findViewById(R.id.picker_title);
-        mWheelYear = (WheelPicker) findViewById(R.id.year);
-        mWheelMonth = (WheelPicker) findViewById(R.id.month);
-        mWheelDay = (WheelPicker) findViewById(R.id.day);
-        mWheelHour = (WheelPicker) findViewById(R.id.hour);
-        mWheelMin = (WheelPicker) findViewById(R.id.min);
-//        mWheelDay.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener) mDayListener);
-//        mWheelDay.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener) mDayListener);
-//        mWheelHour.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener)mHourListener);
-//        mWheelMin.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener) mMinListener);
-//        mWheelYear.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener) mYearListener);
-//        mWheelMonth.setOnItemSelectedListener((WheelPicker.OnItemSelectedListener) mMonthListener);
+        mWheelYear = (WheelPicker_New) findViewById(R.id.year);
+        mWheelMonth = (WheelPicker_New) findViewById(R.id.month);
+        mWheelDay = (WheelPicker_New) findViewById(R.id.day);
+        mWheelHour = (WheelPicker_New) findViewById(R.id.hour);
+        mWheelMin = (WheelPicker_New) findViewById(R.id.min);
+//        mWheelDay.setOnItemSelectedListener((WheelPicker_New.OnItemSelectedListener) mDayListener);
+//        mWheelDay.setOnItemSelectedListener((WheelPicker_New.OnItemSelectedListener) mDayListener);
+//        mWheelHour.setOnItemSelectedListener((WheelPicker_New.OnItemSelectedListener)mHourListener);
+//        mWheelMin.setOnItemSelectedListener((WheelPicker_New.OnItemSelectedListener) mMinListener);
+//        mWheelYear.setOnItemSelectedListener((WheelPicker_New.OnItemSelectedListener) mYearListener);
+//        mWheelMonth.setOnItemSelectedListener((WheelPicker_New.OnItemSelectedListener) mMonthListener);
         mWheelYear.setCurtain(true);
         mWheelMonth.setCurtain(true);
         mWheelDay.setCurtain(true);

@@ -43,7 +43,7 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <com.aigestudio.wheelpicker.WheelPicker
+            <com.easycode.view.timepick.WheelPicker_New
                 android:id="@+id/year"
                 style="@style/wheelViewStyle"
                 />
@@ -61,7 +61,7 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <com.aigestudio.wheelpicker.WheelPicker
+            <com.easycode.view.timepick.WheelPicker_New
                 android:id="@+id/month"
                 style="@style/wheelViewStyle"
                 app:wheel_maximum_width_text="500dp"/>
@@ -79,7 +79,7 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <com.aigestudio.wheelpicker.WheelPicker
+            <com.easycode.view.timepick.WheelPicker_New
                 android:id="@+id/day"
                 style="@style/wheelViewStyle" />
         </LinearLayout>
@@ -96,7 +96,7 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <com.aigestudio.wheelpicker.WheelPicker
+            <com.easycode.view.timepick.WheelPicker_New
                 android:id="@+id/hour"
                 style="@style/wheelViewStyle" />
         </LinearLayout>
@@ -112,7 +112,7 @@
             android:layout_weight="1"
             android:gravity="center">
 
-            <com.aigestudio.wheelpicker.WheelPicker
+            <com.easycode.view.timepick.WheelPicker_New
                 android:id="@+id/min"
                 style="@style/wheelViewStyle" />
         </LinearLayout>

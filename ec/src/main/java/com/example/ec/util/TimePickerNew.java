@@ -6,8 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
-import com.aigestudio.wheelpicker.WheelPicker;
-import com.easycode.util.L;
+import com.easycode.view.timepick.WheelPicker_New;
 import com.example.ec.R;
 
 import java.util.ArrayList;
@@ -21,11 +20,11 @@ import java.util.Locale;
 
 public class TimePickerNew extends LinearLayout {
 
-    private WheelPicker mWheelYear;
-    private WheelPicker mWheelMonth;
-    private WheelPicker mWheelDay;
-    private WheelPicker mWheelHour;
-    private WheelPicker mWheelMin;
+    private WheelPicker_New mWheelYear;
+    private WheelPicker_New mWheelMonth;
+    private WheelPicker_New mWheelDay;
+    private WheelPicker_New mWheelHour;
+    private WheelPicker_New mWheelMin;
     private Calendar mCalendar, mCalendar2;
     private int thisDay, thisMonth, thisYear, thisHour, thisMin, daysCountOfMonth;
 
@@ -42,11 +41,11 @@ public class TimePickerNew extends LinearLayout {
         super.onFinishInflate();
         LayoutInflater.from(getContext()).inflate(R.layout.timepicker_new, this);
 
-        mWheelYear = (WheelPicker) findViewById(R.id.wheel_year);
-        mWheelMonth = (WheelPicker) findViewById(R.id.wheel_month);
-        mWheelDay = (WheelPicker) findViewById(R.id.wheel_day);
-        mWheelHour = (WheelPicker) findViewById(R.id.wheel_hour);
-        mWheelMin = (WheelPicker) findViewById(R.id.wheel_min);
+        mWheelYear = (WheelPicker_New) findViewById(R.id.wheel_year);
+        mWheelMonth = (WheelPicker_New) findViewById(R.id.wheel_month);
+        mWheelDay = (WheelPicker_New) findViewById(R.id.wheel_day);
+        mWheelHour = (WheelPicker_New) findViewById(R.id.wheel_hour);
+        mWheelMin = (WheelPicker_New) findViewById(R.id.wheel_min);
 
         //设置监听
         mWheelYear.setOnItemSelectedListener(mYearListener);
@@ -109,9 +108,9 @@ public class TimePickerNew extends LinearLayout {
     /**
      * Year 滑动监听
      */
-    private WheelPicker.OnItemSelectedListener mYearListener = new WheelPicker.OnItemSelectedListener() {
+    private WheelPicker_New.OnItemSelectedListener mYearListener = new WheelPicker_New.OnItemSelectedListener() {
         @Override
-        public void onItemSelected(WheelPicker picker, Object data, int position) {
+        public void onItemSelected(WheelPicker_New picker, Object data, int position) {
             Log.v("onYearListener", String.valueOf(position));
         }
     };
@@ -119,9 +118,9 @@ public class TimePickerNew extends LinearLayout {
     /**
      * Month 滑动监听
      */
-    private WheelPicker.OnItemSelectedListener mMonthListener = new WheelPicker.OnItemSelectedListener() {
+    private WheelPicker_New.OnItemSelectedListener mMonthListener = new WheelPicker_New.OnItemSelectedListener() {
         @Override
-        public void onItemSelected(WheelPicker picker, Object data, int position) {
+        public void onItemSelected(WheelPicker_New picker, Object data, int position) {
             Log.v("onMonthListener", String.valueOf(position));
         }
     };
@@ -129,9 +128,9 @@ public class TimePickerNew extends LinearLayout {
     /**
      * Day 滑动监听
      */
-    private WheelPicker.OnItemSelectedListener mDayListener = new WheelPicker.OnItemSelectedListener() {
+    private WheelPicker_New.OnItemSelectedListener mDayListener = new WheelPicker_New.OnItemSelectedListener() {
         @Override
-        public void onItemSelected(WheelPicker picker, Object data, int position) {
+        public void onItemSelected(WheelPicker_New picker, Object data, int position) {
             Log.v("onDayListener", String.valueOf(position));
         }
     };
