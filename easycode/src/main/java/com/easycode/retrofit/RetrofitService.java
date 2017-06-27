@@ -25,10 +25,10 @@ import retrofit2.http.Url;
 public interface RetrofitService {
 
 //    @POST("/{url}")
-//    Call<Pojo> createCommitPojo(@Path("/Retrofit2") String url,@QueryMap Map<String,String> options);
+//    Call<Pojo> createCommitPojo(@Url("/Retrofit2") String url,@QueryMap Map<String,String> options);
 
     @POST("{url}")
-    Call<ResponseBody> createCommitResponseBody(@Path("url") String url, @QueryMap Map<String, String> options);
+    Call<ResponseBody> createCommitResponseBody(@Url String url, @QueryMap Map<String, String> options);
 
 //    @Multipart
 //    @POST("/upload")
@@ -62,29 +62,29 @@ public interface RetrofitService {
 
 
     @POST("{url}")
-    Observable<BaseCallModel> createRx(@Path("url") String url, @QueryMap Map<String, String> options);
+    Observable<BaseCallModel> createRx(@Url String url, @QueryMap Map<String, String> options);
 
 
     @GET("{url}")
-    Observable<BaseCallModel> createRx2(@Path("url") String url, @QueryMap Map<String, String> options);
+    Observable<BaseCallModel> createRx2(@Url String url, @QueryMap Map<String, String> options);
 
 
     @GET("{url}")
     Observable<BaseCallModel> executeGet(
-            @Path("url") String url,
+            @Url String url,
             @QueryMap Map<String, String> maps
     );
 
 
     @POST("{url}")
     Observable<BaseCallModel> executePost(
-            @Path("url") String url,
+            @Url String url,
             //  @Header("") String authorization,
             @QueryMap Map<String, String> maps);
 
     @POST("user/{url}")
     Observable<BaseCallModel> scanexecutePost(
-            @Path("url") String url,
+            @Url String url,
             //  @Header("") String authorization,
             @QueryMap Map<String, String> maps);
 
