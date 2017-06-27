@@ -1,5 +1,9 @@
 apply plugin: 'com.android.library'
 
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.yzzslow0'
+
 android {
     publishNonDefault true // debug 返回false 解决
     compileSdkVersion 25
